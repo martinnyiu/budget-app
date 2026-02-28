@@ -17,6 +17,7 @@
   --border: #2d2d3d;
   --nav-h: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
 }
 
 html, body {
@@ -34,7 +35,8 @@ body {
 
 /* ===== APP CONTAINER ===== */
 #app {
-  height: calc(100dvh - var(--nav-h) - var(--safe-bottom));
+  height: calc(100dvh - var(--nav-h) - var(--safe-bottom) - var(--safe-top));
+  margin-top: var(--safe-top);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
